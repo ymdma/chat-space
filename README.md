@@ -49,7 +49,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### 一意性制約
 add_index :groups, :group_name, unique: true
