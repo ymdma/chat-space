@@ -75,7 +75,8 @@ add_index :groups, :group_name, unique: true
 |------|----|-------|
 |group_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
-
+|text|references|null: false|
+|image_url|references|null: false|
 
 ### Association
 - belongs_to :group
