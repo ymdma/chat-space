@@ -80,7 +80,7 @@ add_index :groups, :group_name, unique: true
 |group_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 |text|text|
-|image_url|references|null: false|
+|image_url|string|
 
 ### Association
 - belongs_to :group
