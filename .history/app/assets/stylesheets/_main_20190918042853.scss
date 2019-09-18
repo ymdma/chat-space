@@ -1,0 +1,117 @@
+
+.chat-main{
+  width: calc(100vw - 300px);
+  height: 100%;
+}
+
+.main-header{
+  background: #FFFFFF;
+  width: calc(100vw - 300px);
+  height: 82px;
+  padding:0 40px;
+  border-bottom: solid #eeeeee 2px;
+  display: flex;
+  justify-content: space-between;
+  &__left-box{
+    padding: 35px 0 0 0;
+    &__group-name{
+      line-height: 20px;
+      font-size: 20px;
+      color: #333333;
+      vertical-align: super;
+    }
+    &__group-members{
+      margin: 15px 0 0 0;
+      line-height: 12px;
+      font-size: 12px;
+      color: $subFontColor_1;
+      vertical-align: super;
+    }
+  }
+}
+
+.main-header__edit-btn{
+  width: 80px;
+  padding: 0 20px;
+  height: 40px;
+  margin-top: 28px;
+  border:solid $mainBlueColor 2px;
+  & p{
+    color: $mainBlueColor;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: center;
+  }
+}
+
+.messages{
+  width: calc(100vw - 300px);
+  padding: 0 40px;
+  height: calc(100vh - 172px);
+  background: #fafafa;
+
+}
+
+.message{
+  height: 82px;
+  &__user-id{
+    font-size: 16px;
+    font-weight: bold;
+    color: $subFontColor_2;
+  }
+  &__date{
+    font-size: 12px;
+    color: $subFontColor_1;
+  }
+  &__text{
+    font-size: 14px;
+    color: $subFontColor_1;
+  }
+
+}
+
+.form{
+  width: calc(100vw - 300px);
+  height: 90px;
+  background: #dddddd;
+}
+
+.input-box{
+  background:greenyellow;
+
+
+  padding: 0 10px;
+  display: flex;
+  &__form{
+    font-size: 16px;
+    width: calc(100% - 135px);
+    background: white;
+    height: 50px;
+    color: $subFontColor_2;
+    display:flex;
+  }
+}
+
+.input_box__form i{
+  font-size: 1.5em;
+  line-height: 50px;
+
+  color: black;
+  vertical-align: center;
+
+}
+
+.submit_btn{
+  background-color: $mainBlueColor;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 15px;
+  text-align: center;
+  vertical-align: center;
+  cursor: pointer;
+}
+
+.submit_btn p{
+  color: $mainFontColor;
+}

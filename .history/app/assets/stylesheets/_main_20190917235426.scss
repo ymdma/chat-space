@@ -1,0 +1,73 @@
+
+.chat-main{
+  width: calc(100vw - 300px);
+  height: 100%;
+}
+
+
+
+
+.main-header{
+  background: #FFFFFF;
+  width: calc(100vw - 300px);
+  height: 82px;
+  padding: 35px 0 0 0;
+  border-bottom: solid #eeeeee 2px;
+  &__left-box{
+    background: yellow;
+    width: 300px;
+    &__group-name{
+      font-size: 20px;
+      line-height: 20px;
+    }
+    &__group-members{
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+.main-header__edit-btn{
+  width: 80px;
+  height: 40px;
+  padding: 0 20px;
+  margin: 28px;
+  border:solid #38AEF0 2px;
+  & p{
+    color: #38AEF0;
+    text-align: center;
+  }
+}
+
+.messages{
+  width: calc(100vw - 300px);
+  height: calc(100vh - 172px);
+  background: #fafafa;
+}
+
+.form{
+  width: calc(100vw - 300px);
+  height: 90px;
+  background: gray;
+}
+
+.input-box{
+  background:#ffffff;
+  height: 50px;
+  padding: 0 10px;
+  &__form{
+    font-size: 16px;
+    color: #434A54;
+  }
+}
+
+.submit_btn{
+  height: 50px;
+  width: 100px;
+  margin-left:15px;
+  background-color: #38AEF0
+}
+
+.submit_btn p{
+  color:#ffffff;
+
+}

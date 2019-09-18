@@ -1,0 +1,52 @@
+%div.wrapper
+  %div.chat_side
+    %div.side-header
+      %div.side-header__box
+        %p.side-header__box__user-name Nickname
+        %ul.side-header__box__menu
+          %li.side-header__box__menu__new-group
+            = link_to '#' do
+              %i.fa.fa-edit
+          %li.side-header__box__menu__edit-user
+            = link_to '#' do
+              %i.fa.fa-cog
+    %div.side-groups
+      %div.group
+        %div.group__group-name group-name1
+        %div.group__latest-message latest-message
+      %div.group2
+        %div.group__group-name group-name2
+        %div.group__latest-message latest-message
+      %div.group3
+        %div.group__group-name group-name3
+        %div.group__latest-message latest-message
+  %div.chat-main
+    %div.main-header
+      %div.main-header__left-box
+        %p.main-header__left-box__group-name group-name
+        %p.main-header__left-box__group-members Member：xxxx oooo
+      %div.main-header__edit-btn
+        %p EDIT
+    %div.messages
+      %div.message
+        %p.message__user-id Nick
+        %p.message__date 20xx/09/14(Sat) 12:34:56
+        %p.message__text text text text
+      %div.message
+        %p.message__user-id Nick
+        %p.message__date 20xx/09/14(Sat) 12:34:56
+        %p.message__text text text text
+      %div.message
+        %p.message__user-id Nick
+        %p.message__date 20xx/09/14(Sat) 12:34:56
+        %p.message__text text text text
+    %div.form
+      %div.input-box
+        %div.input_box__form
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+
+          %form.new-message-input
+          = link_to '#' do
+            %i.fa.fa-image
+        %div.submit_btn
+          %p Send

@@ -1,0 +1,43 @@
+@import "./reset";
+// @_variable "./reset";
+
+// $SideMainColor: #253141;
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+.chat-side{
+
+}
+.side-header{
+  background-color: #253141;
+}
+
+#side_header_user_name_box Nickname{
+  background-color: #253141;
+}
+
+
+
+.side-main{
+  background-color: #2f3e51;
+  
+}
+
+
+
+
+// %div.wrapper
+//   %div.chat-side
+//     %div.side-header
+//       %p#side_header_user_name_box Nickname
+//     %div.side-header-icons
+//       %ul
+//         %li#icon_ausome icon_A
+//         %li#icon_ausome icon_B
+//     %div.side-groups
+//       %div.Side-Groups
+//       %div.Side-1 Nick
+//       %div.Side-2
+//       %div.Side-3

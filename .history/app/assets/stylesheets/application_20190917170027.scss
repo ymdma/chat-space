@@ -1,0 +1,157 @@
+@import "./reset";
+// @_variable "./reset";
+// $SideMainColor: #253141;
+
+*{
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.chat_side{
+  width: 300px;
+  height: 100vh;
+  color: #FFFFFF;
+  // display: flex;
+
+}
+
+.side-header{
+  background: #253141;
+  width: 300px;
+  padding: 0 20px;
+  height: 82px;
+  &__box{
+    height: 20px;
+    &__user-name{
+      height: 16px;
+      width: 100px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: bold;
+    }
+    &__menu{
+      background: #FFFFFF;
+      width: 40px;
+      height: 20px;
+      // &__new-group, &__edit-user{
+        // }
+    }
+  }
+}
+
+.side-groups{
+  background-color: #2F3E51;
+  width: 300px;
+  height: calc(100vh - 82px);
+
+  padding: 20px 20px 0;
+
+  font-size: 15px;
+
+}
+
+.group{
+  height: 71px;
+  margin: 20px 0;
+
+  &__group-name{
+    height: 18px;
+    line-height: 18px;
+    vertical-align: super;
+  }
+  &__message{
+    height:13px;
+    line-height:13px;
+    vertical-align: super;
+  }
+}
+
+.group2{
+  height: 71px;
+  margin: 20px 0;
+
+  &__group-name2{
+    height: 18px;
+    line-height: 18px;
+    vertical-align: super;
+  }
+  &__message2{
+    height:13px;
+    line-height:13px;
+    vertical-align: super;
+  }
+}
+
+.group3{
+  height: 71px;
+  margin: 20px 0;
+
+  &__group-name3{
+    height: 18px;
+    line-height: 18px;
+    vertical-align: super;
+  }
+  &__message3{
+    height:13px;
+    line-height:13px;
+    vertical-align: super;
+  }
+}
+
+
+.chat-main{
+  width: calc(100vw - 300px);
+  height: 100%;
+}
+
+.main-header{
+  width: calc(100vw - 300px);
+  height: 82px;
+  background: #FFFFFF;
+  border-bottom: 2px;
+  border-color: #eeeeee;
+  &__left-box{
+  width: 300px;
+  background: yellow;
+    &__group-name{
+      font-size: 20px;
+      line-height: 20px;
+    }
+    &__group-members{
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+.main-header__edit-btn{
+  width: 80px;
+  height: 40px;
+  padding: 0 20px;
+  margin: 28px;
+  border:solid #38AEF0 2px;
+  & p{
+    color: #38AEF0;
+    text-align: center;
+  }
+}
+// %div.main-header
+
+// %p Member：xxxx oooo
+// %div.main-header__edit-btn
+// %p EDIT
+.messages{
+  width: calc(100vw - 300px);
+  height: calc(100vh - 172px);
+  background: yellow;
+}
+
+.form{
+  width: calc(100vw - 300px);
+  height: 90px;
+  background: blue;
+}
