@@ -1,0 +1,142 @@
+
+.chat-main{
+  width: calc(100vw - 300px);
+  height: 100%;
+}
+
+.flash-box{
+  background: $mainBlueColor;
+  color: $mainFontColor;
+  width: 100%;
+  line-height:18px;
+  text-align: center;
+}
+
+.main-header{
+  background: #FFFFFF;
+  width: calc(100vw - 300px);
+  height: 82px;
+  padding:0 40px;
+  border-bottom: solid #eeeeee 1px;
+  display: flex;
+  justify-content: space-between;
+  &__left-box{
+    padding: 35px 0 0 0;
+    &__group-name{
+      line-height: 20px;
+      font-size: 20px;
+      color: #333333;
+    }
+    &__group-members{
+      margin: 15px 0 0 0;
+      line-height: 12px;
+      font-size: 12px;
+      color: $subFontColor_1;
+    }
+  }
+}
+
+.main-header__edit-btn{
+  width: 80px;
+  padding: 0 20px;
+  height: 40px;
+  margin-top: 28px;
+  border:solid $mainBlueColor 2px;
+  & p{
+    color: $mainBlueColor;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: center;
+  }
+}
+
+.messages{
+  width: calc(100vw - 300px);
+  padding: 0 40px;
+  height: calc(100vh - 172px);
+  background: #fafafa;
+}
+
+.message{
+  height: 86px;
+  padding-top: 40px;
+  &__upper{
+    display: flex;
+    &__user-id{
+      font-size: 16px;
+      font-weight: bold;
+      color: $subFontColor_2;
+    }
+    &__post-date{
+      margin-left: 20px;
+      font-size: 12px;
+      color: $subFontColor_1;
+    }
+  &__text{
+    font-size: 14px;
+    color: $subFontColor_1;
+    }
+  }
+}
+
+.form{
+  width: calc(100vw - 300px);
+  padding-left: 10px;
+  height: 90px;
+  background: #dddddd;
+  display: flex;
+  align-items: center;
+
+}
+
+.input-box{
+  background:greenyellow;
+  width: calc(100% - 115px);
+  height: 50px;
+  margin: 10px;
+  vertical-align: center;
+}
+
+
+// .input__box__text{
+//   font-size: 16px;
+//   line-height: 50px;
+//   color: $subFontColor_2;
+// }
+.input-box__text{
+  width: calc(100% - 30px);
+  line-height: 50px;
+  font-size: 16px;
+  color: $subFontColor_2;
+  border-style: none;
+}
+// .fa.fa-image{
+  // width: 30px;
+  // font-size: 30px;
+  // line-height: 50px;
+  // color: red;
+// }
+
+.far-image{
+  // color: red;
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.submit-btn{
+  background-color: $mainBlueColor;
+  color: $mainFontColor;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 15px;
+  text-align: center;
+  vertical-align: center;
+  cursor: pointer;
+}
+
+.submit-btn p{
+
+
+}
