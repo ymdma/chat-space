@@ -53,7 +53,7 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### 一意性制約
-add_index :groups, :group_name, unique: true
+add_index :groups, :name, unique: true
 
 ### Association
 - has_many :users, through: :groups_users

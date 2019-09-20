@@ -34,14 +34,23 @@
       line-height: 16px;
       font-weight: bold;
     }
+    // &__menu{
+    //   height: 40px;
+    //   display:flex;
+    //   &__new-group{
+    //     margin-left: 10px;
+    //   }
+    //   &__edit-user{
+    //     margin-left: 5px;
+    //   }
+    // }
     &__menu{
       height: 40px;
       display:flex;
-      &__new-group{
-        margin-left: 10px;
-      }
-      &__edit-user{
-        margin-left: 5px;
+      .icon{
+        color: $mainFontColor;
+        margin-left: 7px;
+        list-style: none;
       }
     }
   }
