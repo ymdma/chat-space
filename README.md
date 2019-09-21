@@ -35,7 +35,7 @@ Things you may want to cover:
 |id|integer|null: false, foreign_key: true|
 |name|string|null: false|
 |email|string|null: false|
-|user_password|string|null: false|
+|encrypted_password|string|null: false|
 
 ### 一意性制約
 |add_index :users, [ :user_name, :email ] unique: true|
@@ -53,7 +53,7 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### 一意性制約
-add_index :groups, :group_name, unique: true
+add_index :groups, :name, unique: true
 
 ### Association
 - has_many :users, through: :groups_users
