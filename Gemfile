@@ -57,3 +57,7 @@ gem 'haml-rails'
 gem 'font-awesome-rails'
 #LoginFunction
 gem 'devise'
+#carrierwave:画像の送信/mini_magick:前述に付随して。rmagickの代わり
+#Carrierwaveの導入ができない場合→brew install imagemagick
+gem 'carrierwave'
+gem 'mini_magick'
