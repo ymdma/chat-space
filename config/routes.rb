@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "messages#index"
+  root 'groups#index'
   devise_for :users
   resources :messages, only: [:index]
   resources :users, only: [:index, :edit, :update]

@@ -1,43 +1,43 @@
 -# %div.flash-box
 -#   %p グループを作成しました。
-%div.wrapper
-  %div.chat_side
-    %div.side-header
-      %div.side-header__box
-        = current_user.name
-        %ul.side-header__box__menu
-          -# %li.side-header__box__menu__new-group
-          -#   = link_to '#' do
-          -#     %i.fa.fa-edit
-          -# %li.side-header__box__menu__edit-user
-          -#   = link_to '#' do
-          -#     %i.fa.fa-cog
-          %li.list
-            = link_to new_group_path do
-              = fa_icon 'pencil-square-o', class: 'icon'
-          %li.list
-            = link_to edit_user_path(current_user) do
-              = fa_icon 'cog', class: 'icon'
+-# %div.wrapper
 
+  -# %div.chat_side
+  -#   %div.side-header
+  -#     %div.side-header__box
+  -#       = current_user.name
+  -#       %ul.side-header__box__menu
+  -#         -# %li.side-header__box__menu__new-group
+  -#         -#   = link_to '#' do
+  -#         -#     %i.fa.fa-edit
+  -#         -# %li.side-header__box__menu__edit-user
+  -#         -#   = link_to '#' do
+  -#         -#     %i.fa.fa-cog
+  -#         %li.list
+  -#           = link_to new_group_path do
+  -#             = fa_icon 'pencil-square-o', class: 'icon'
+  -#         %li.list
+  -#           = link_to edit_user_path(current_user) do
+  -#             = fa_icon 'cog', class: 'icon'
+  -#   %div.side-groups
+  -#     %div.group
+  -#       %div.group__group-name group-name1
+  -#       %div.group__latest-message latest-message
+  -#     %div.group2
+  -#       %div.group__group-name group-name2
+  -#       %div.group__latest-message latest-message
+  -#     %div.group3
+  -#       %div.group__group-name group-name3
+  -#       %div.group__latest-message latest-message
+  -# %div.chat-main
+  -#   %div.main-header
+  -#     %div.main-header__left-box
+  -#       %p.main-header__left-box__group-name group-name
+  -#       %p.main-header__left-box__group-members Member：xxxx oooo
+  -#     %div.main-header__edit-btn
+  -#       = link_to '#' do
+  -#         %p EDIT
 
-    %div.side-groups
-      %div.group
-        %div.group__group-name group-name1
-        %div.group__latest-message latest-message
-      %div.group2
-        %div.group__group-name group-name2
-        %div.group__latest-message latest-message
-      %div.group3
-        %div.group__group-name group-name3
-        %div.group__latest-message latest-message
-  %div.chat-main
-    %div.main-header
-      %div.main-header__left-box
-        %p.main-header__left-box__group-name group-name
-        %p.main-header__left-box__group-members Member：xxxx oooo
-      %div.main-header__edit-btn
-        = link_to '#' do
-          %p EDIT
     %div.messages
       %div.message
         %div.message__upper

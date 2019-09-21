@@ -1,0 +1,35 @@
+%div.wrapper
+
+  = render 'shared/side_bar'
+
+  %div.chat-main
+    %div.main-header
+      %div.main-header__left-box
+        %p.main-header__left-box__group-name group-name
+        %p.main-header__left-box__group-members Member：xxxx oooo
+      %div.main-header__edit-btn
+        = link_to '#' do
+          %p EDIT
+    %div.messages
+      %div.message
+        %div.message__upper
+          %p.message__upper__user-id Nickname
+          %p.message__upper__post-date 20xx/09/14(Sat) 12:34:56
+        %p.message__text text text text
+      %div.message
+        %div.message__upper
+          %p.message__upper__user-id Nickname
+          %p.message__upper__post-date 20xx/09/14(Sat) 12:34:56
+        %p.message__text text text text
+      %div.message
+        %div.message__upper
+          %p.message__upper__user-id Nickname
+          %p.message__upper__post-date 20xx/09/14(Sat) 12:34:56
+        %p.message__text text text text
+    %div.form
+      %div.input-box
+        %input.input-box__text#message_content{name:"message[content]", placeholder:"write message", type:"text"}
+        %label.input-box__image{for:"upload-image"}
+          %i.fa.fa-image
+          %input#upload-image{name:"image", type:"file"}
+      %input.submit-btn{type:"submit", value:"Send"}
