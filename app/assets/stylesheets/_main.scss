@@ -36,9 +36,10 @@
   }
 }
 
-a:visited {
-  color: #333333;
-}
+// :a:visited {
+//   color: #333333;
+// }
+
 
 .main-header__edit-btn{
   width: 80px;
@@ -64,76 +65,96 @@ a:visited {
 .message{
   height: 86px;
   padding-bottom: 40px;
-  &__upper{
-    display: flex;
-    &__user-id{
-      font-size: 16px;
-      height: 16px;
-      line-height: 16px;
-      font-weight: bold;
-      color: $subFontColor_2;
-    }
-    &__post-date{
-      margin-left: 20px;
-      font-size: 12px;
-      color: $subFontColor_1;
-    }
+
+  }
+
+// メッセージ
+  .upper-message{
+  display: flex;
+  &__user-name{
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: $subFontColor_2;
+  }
+  &__date{
+    margin-left: 20px;
+    font-size: 12px;
+    color: $subFontColor_1;
   }
 }
-.message__text{
+
+.lower-message{
   height: 14px;
-  line-height: 14px;
-  color: $subFontColor_1;
+  .lower-message__content{
+
+    line-height: 14px;
+    color: $subFontColor_1;
   }
+}
+
+.form-wrapper{
+  width: 100%;
+  padding: 20px 40px;
+  height: 90px;
+  background: #dddddd;
+}
 
 .form{
   width: 100%;
-  height: 90px;
-  background: #dddddd;
-  display: flex;
-  align-items: center;
-
-}
-
-.input-box{
-  background:#ffffff;
-  width: calc(100% - 155px);
-  margin: 0 10px 0 40px;
   height: 50px;
   vertical-align: center;
+  // position: relative;
+
+}
+.form form{
+display: flex;
+align-items: center;
 }
 
-.input-box__text{
-  width: calc(100% - 65px);
-  margin: 0 10px 0;
+.form__message{
+  width: 100%;
+  padding: 0 10px;
+  // margin: 0 10px 0;
   line-height: 50px;
   font-size: 16px;
   color: $subFontColor_2;
   border-style: none;
+  // float: left;
 }
-.input-box__text{
-  margin-left:15px;
+// .input-box__text{
+//   margin-left:15px;
+// }
+
+.form__mask{
+  background: $mainFontColor;
+  padding-right: 10px;
+  line-height: 50px;
+  vertical-align: center;
 }
 
-.input-box .fa{
+.form__mask__image .icon{
   color:black;
-  cursor: pointer;
+  // cursor: pointer;
   font-size: 1.2em;
+  // margin-right: 10px;
 }
-#upload-image{
+.form__mask__image .hidden{
   display: none;
 }
 
-.submit-btn{
+.form__submit{
   background-color: $mainBlueColor;
   color: $mainFontColor;
   width: 100px;
   height: 50px;
   line-height: 50px;
-  margin: 0 40px 0 15px;
+  margin-left: 15px;
   text-align: center;
-  vertical-align: center;
+  // vertical-align: center;
   cursor: pointer;
+  // float: right;
 }
 
 
