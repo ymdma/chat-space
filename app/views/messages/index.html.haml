@@ -1,63 +1,29 @@
--# %div.flash-box
--#   %p グループを作成しました。
--# %div.wrapper
+%div.wrapper
 
-  -# %div.chat_side
-  -#   %div.side-header
-  -#     %div.side-header__box
-  -#       = current_user.name
-  -#       %ul.side-header__box__menu
-  -#         -# %li.side-header__box__menu__new-group
-  -#         -#   = link_to '#' do
-  -#         -#     %i.fa.fa-edit
-  -#         -# %li.side-header__box__menu__edit-user
-  -#         -#   = link_to '#' do
-  -#         -#     %i.fa.fa-cog
-  -#         %li.list
-  -#           = link_to new_group_path do
-  -#             = fa_icon 'pencil-square-o', class: 'icon'
-  -#         %li.list
-  -#           = link_to edit_user_path(current_user) do
-  -#             = fa_icon 'cog', class: 'icon'
-  -#   %div.side-groups
-  -#     %div.group
-  -#       %div.group__group-name group-name1
-  -#       %div.group__latest-message latest-message
-  -#     %div.group2
-  -#       %div.group__group-name group-name2
-  -#       %div.group__latest-message latest-message
-  -#     %div.group3
-  -#       %div.group__group-name group-name3
-  -#       %div.group__latest-message latest-message
-  -# %div.chat-main
-  -#   %div.main-header
-  -#     %div.main-header__left-box
-  -#       %p.main-header__left-box__group-name group-name
-  -#       %p.main-header__left-box__group-members Member：xxxx oooo
-  -#     %div.main-header__edit-btn
-  -#       = link_to '#' do
-  -#         %p EDIT
+  = render 'shared/side_bar'
 
-    %div.messages
-      %div.message
-        %div.message__upper
-          %p.message__upper__user-id Nickname
-          %p.message__upper__post-date 20xx/09/14(Sat) 12:34:56
-        %p.message__text text text text
-      %div.message
-        %div.message__upper
-          %p.message__upper__user-id Nickname
-          %p.message__upper__post-date 20xx/09/14(Sat) 12:34:56
-        %p.message__text text text text
-      %div.message
-        %div.message__upper
-          %p.message__upper__user-id Nickname
-          %p.message__upper__post-date 20xx/09/14(Sat) 12:34:56
-        %p.message__text text text text
+  %div.chat-main
+    %div.main-header
+      %div.main-header__left-box
+        %p.main-header__left-box__group-name group-name
+        %p.main-header__left-box__group-members Member：xxxx oooo
+      %div.main-header__edit-btn
+        = link_to '#' do
+          %p EDIT
+
+  %div.messages
+    = render @messages
+    -# 省略前
+    -# = render partial: 'message', collection: @messages
+
+  %div.form-wrapper
     %div.form
-      %div.input-box
-        %input.input-box__text#message_content{name:"message[content]", placeholder:"write message", type:"text"}
-        %label.input-box__image{for:"upload-image"}
-          %i.fa.fa-image
-          %input#upload-image{name:"image", type:"file"}
-      %input.submit-btn{type:"submit", value:"Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
+
