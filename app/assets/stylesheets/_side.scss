@@ -65,6 +65,7 @@
 .group{
   height: 71px;
   margin: 20px 0;
+  overflow: scroll;
   .group__name{
     color: $mainFontColor;
     height: 18px;
