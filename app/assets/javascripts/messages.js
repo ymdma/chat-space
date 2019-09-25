@@ -1,8 +1,9 @@
 $(function(){
 
   function buildHTML(message){
-    if ( message.image ) {
-      var html =
+    var content = message.content ? `${message.content}` : "";
+    var img = message.image ? `${message.image}` : "";
+    var html =
       `<div class="message" data-message-id=${message.id}>
         <div class="upper-message">
           <div class="upper-message__user-name">
@@ -14,32 +15,14 @@ $(function(){
         </div>
         <div class="lower-message">
           <p class="lower-message__content">
-          ${message.content}
+          ${content}
           </p>
-          <img src=${message.image}>
+          <img src=${img}>
         </div>
       </div>`
       return html;
-    } else {
-      var html =
-      `<div class="message" data-message-id=${message.id}>
-        <div class="upper-message">
-          <div class="upper-message__user-name">
-            ${message.user_name}
-          </div>
-          <div class="upper-message__date">
-            ${message.date}
-          </div>
-        </div>
-        <div class="lower-message">
-          <p class="lower-message__content">
-          ${message.content}
-          </p>
-        </div>
-      </div>`
-      return html;
-    };
-  }
+    }
+
 
   $("#new_message").on("submit", function(e){
     e.preventDefault();
@@ -55,7 +38,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      var html = buildHTML(data);
+        var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('.new_message')[0].reset();
