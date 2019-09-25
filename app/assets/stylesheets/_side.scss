@@ -3,7 +3,6 @@
   width: 300px;
   height: 100vh;
   color: $mainFontColor;
-
 }
 
 .side-header{
@@ -24,16 +23,7 @@
       line-height: 16px;
       font-weight: bold;
     }
-    // &__menu{
-    //   height: 40px;
-    //   display:flex;
-    //   &__new-group{
-    //     margin-left: 10px;
-    //   }
-    //   &__edit-user{
-    //     margin-left: 5px;
-    //   }
-    // }
+
     &__menu{
       height: 40px;
       display:flex;
@@ -45,21 +35,12 @@
     }
   }
 }
-// .side-header__box__menu{
-//   &__new-group .fa{
-//     color: $mainFontColor;
-//   }
-//   &__edit-user .fa{
-//     color: $mainFontColor;
-//   }
-// }
 
 .groups{
   background-color:  #2F3E51;
   width: 300px;
   height: calc(100vh - 82px);
   padding: 20px 20px 0px;
-  // color: $mainFontColor;
 }
 
 .group{
