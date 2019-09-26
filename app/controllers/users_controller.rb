@@ -2,6 +2,16 @@ class UsersController < ApplicationController
 
   before_action :authenticate_user!
 
+  def index
+    # binding.pry
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)###### @usersを,検索機能を持たせた変数のオブジェクトにする！ nameのカラムの値から一致する値を全部出す （LIKE句によって）
+    respond_to do |user|
+      user.html
+      user.json
+    end
+  end
+
+
   def edit
   end
 
@@ -12,6 +22,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
 
   private
 

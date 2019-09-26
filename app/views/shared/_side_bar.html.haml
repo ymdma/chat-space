@@ -6,12 +6,6 @@
       %div.side-header__box__user-name
         = current_user.name
       %ul.side-header__box__menu
-        -# %li.side-header__box__menu__new-group
-        -#   = link_to '#' do
-        -#     %i.fa.fa-edit
-        -# %li.side-header__box__menu__edit-user
-        -#   = link_to '#' do
-        -#     %i.fa.fa-cog
         %li.list
           = link_to new_group_path do
             = fa_icon 'pencil-square-o', class: 'icon'
@@ -26,14 +20,3 @@
             = group.name
           %div.group__message
             メッセージはまだありません。
-  -# 初期
-  -# %div.side-groups
-  -#   %div.group
-  -#     %div.group__group-name group-name1
-  -#     %div.group__latest-message latest-message
-  -#   %div.group2
-  -#     %div.group__group-name group-name2
-  -#     %div.group__latest-message latest-message
-  -#   %div.group3
-  -#     %div.group__group-name group-name3
-  -#     %div.group__latest-message latest-message
