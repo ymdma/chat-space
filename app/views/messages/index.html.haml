@@ -5,10 +5,14 @@
   %div.chat-main
     %div.main-header
       %div.main-header__left-box
-        %p.main-header__left-box__group-name group-name
-        %p.main-header__left-box__group-members Member：xxxx oooo
+        %p.main-header__left-box__group-name
+          = @group.name
+        %p.main-header__left-box__group-members
+          Member：
+          - @group.users.each do |user|
+            = user.name
       %div.main-header__edit-btn
-        = link_to '#' do
+        = link_to edit_group_path(@group) do
           %p EDIT
 
     %div.messages
