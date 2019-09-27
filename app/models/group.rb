@@ -15,7 +15,7 @@ class Group < ApplicationRecord
 
 end
 
-# 三項演算子を用いない場合
+# show --三項演算子を用いない場合--
 # def show_last_message
 #   if (last_message = messages.last).present?
 #     if last_message.content?
