@@ -25,7 +25,6 @@ $(function(){
               return html;
   }
 
-
   //インクルメンタルサーチ
   $("#new_message").on("submit", function(e){
     e.preventDefault();
@@ -81,7 +80,7 @@ $(function(){
     });
   };
   //自動読み込み(msec)
-  if (document.URL.match("/messages")){
-    setInterval(reloadMessages, 5000);// *ここにメッセージ画面でのみ自動更新するための 条件分岐を追記する
+  if (document.URL.match("/messages")){// メッセージ画面でのみ自動更新するための条件分岐
+    setInterval(reloadMessages, 5000);
   }
 });
