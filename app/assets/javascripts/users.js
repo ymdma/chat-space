@@ -15,7 +15,7 @@ var chat_group_user = $('#chat-group-member'); //仕込み チャットメンバ
     search_list.append(html);
   }
 
-  function adduser(name,user_id) {
+  function addUser(name,user_id) {
 
     html = `<div class='chat-group-user'>
             <input name='group[user_ids][]' type='hidden' value='${user_id}'>
@@ -63,7 +63,7 @@ var chat_group_user = $('#chat-group-member'); //仕込み チャットメンバ
   $(document).on("click",".chat-group-user__btn--add", function(){
     var name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
-    adduser(name,user_id);
+    addUser(name,user_id);
     $(this).parent().remove();
   });
 
