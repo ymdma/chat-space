@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'new-upload1'
-  config.asset_host = 'ap-northeast-1.amazonaws.com/new-upload1'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/new-upload1'
 end
